@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../button/button.styles.scss";
 
 import {
   createAuthUserWithEmailAndPassword,
@@ -96,7 +97,9 @@ const SignUpForm = () => {
           name="confirmPassword"
           value={confirmPassword}
         />
-        <Button type="submit">Sign Up</Button>
+        <Button buttonType="google" type="submit">
+          SIGN UP
+        </Button>
       </form>
     </div>
   );
