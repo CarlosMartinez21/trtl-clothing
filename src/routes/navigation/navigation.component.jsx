@@ -4,10 +4,13 @@ import { ReactComponent as TrtlLogo } from "../../assets/crown.svg";
 import "./navigation.styles.scss";
 import { UserContext } from "../../contexts/user.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
+import CartIcon from "../../components/cart-icon/cart-icon.component";
+import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+import { ShowCartContext } from "../../contexts/showcart.context";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
-
+  const { isCartOpen } = useContext(ShowCartContext);
   return (
     <Fragment>
       <div className="navigation">
@@ -28,7 +31,9 @@ const Navigation = () => {
               SIGN IN
             </Link>
           )}
+          <CartIcon />
         </div>
+        {isCartOpen && <CartDropdown />}
       </div>
       <Outlet />
     </Fragment>
