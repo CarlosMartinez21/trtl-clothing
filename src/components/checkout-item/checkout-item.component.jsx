@@ -1,4 +1,13 @@
-import "./checkout-item.styles.scss";
+import {
+  CheckoutItemContainer,
+  ImageContainer,
+  Image,
+  Name,
+  Quantity,
+  Arrow,
+  Value,
+  RemoveButton,
+} from "./checkout-item.styles.jsx";
 import { useContext } from "react";
 import { ShowCartContext } from "../../contexts/cart.context";
 
@@ -15,27 +24,27 @@ const CheckoutItem = ({ cartItem }) => {
   };
 
   return (
-    <div className="checkout-item-container" key={id}>
-      <div className="image-container">
-        <img src={imageUrl} alt={name} />
-      </div>
-      <span className="name">{name}</span>
-      <span className="quantity">
-        <div className="arrow">
+    <CheckoutItemContainer key={id}>
+      <ImageContainer>
+        <Image src={imageUrl} alt={name} />
+      </ImageContainer>
+      <Name>{name}</Name>
+      <Quantity>
+        <Arrow>
           <button onClick={addItem} value="<">
             &lt;
           </button>
-          <span className="value">{quantity}</span>
+          <Value>{quantity}</Value>
           <button onClick={addItem} value=">">
             &gt;
           </button>
-        </div>
-      </span>
-      <span className="price">{price}</span>
-      <div className="remove-button">
+        </Arrow>
+      </Quantity>
+      <Name>{price}</Name>
+      <RemoveButton>
         <span onClick={deleteItem}>&#10006;</span>
-      </div>
-    </div>
+      </RemoveButton>
+    </CheckoutItemContainer>
   );
 };
 export default CheckoutItem;

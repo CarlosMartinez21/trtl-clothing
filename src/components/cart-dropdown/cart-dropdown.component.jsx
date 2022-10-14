@@ -1,5 +1,5 @@
 import Button from "../button/button.component";
-import "./cart-dropdown.styles.scss";
+import { CartDropDownContainer, CartItems } from "./cart-dropdown.styles.jsx";
 import CartItem from "../cart-item/cart-item.component";
 import { useContext } from "react";
 import { ShowCartContext } from "../../contexts/cart.context";
@@ -14,14 +14,14 @@ const CartDropdown = () => {
   };
 
   return (
-    <div className="cart-dropdown-container">
-      <div className="cart-items">
+    <CartDropDownContainer>
+      <CartItems>
         {cartItems.map((item) => (
           <CartItem key={item.id} cartItem={item} />
         ))}
-      </div>
+      </CartItems>
       <Button onClick={routeChange}>CHECKOUT</Button>
-    </div>
+    </CartDropDownContainer>
   );
 };
 
