@@ -15,10 +15,17 @@ import { ShowCartContext } from "../../contexts/cart.context";
 import { useSelector } from "react-redux";
 import { selectCurrentUser } from "../../store/user/user.selector";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
+import { useDispatch } from "react-redux";
+import { signOutStart } from "../../store/user/user.action";
 
 const Navigation = () => {
+  const dispatch = useDispatch();
   /* const { currentUser } = useContext(UserContext);*/
   const currentUser = useSelector(selectCurrentUser);
+
+  const signout = () => {
+    dispatch(signOutStart(currentUser));
+  };
 
   /* const { isCartOpen } = useContext(ShowCartContext);*/
   const isCartOpen = useSelector(selectIsCartOpen);
@@ -31,7 +38,7 @@ const Navigation = () => {
         <NavLinks>
           <NavLink to="/shop">SHOP</NavLink>
           {currentUser ? (
-            <NavLink as="span" onClick={signOutUser}>
+            <NavLink as="span" onClick={signout}>
               {" "}
               SIGN OUT
             </NavLink>
