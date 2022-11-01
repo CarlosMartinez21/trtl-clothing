@@ -7,7 +7,7 @@ import {
   Arrow,
   Value,
   RemoveButton,
-} from "./checkout-item.styles.jsx";
+} from "./checkout-item.styles";
 import { useContext } from "react";
 import { ShowCartContext } from "../../contexts/cart.context";
 import {

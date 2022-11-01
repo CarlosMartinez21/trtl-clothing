@@ -9,7 +9,7 @@ import {
 } from "../../utils/firebase/firebase.utils";
 
 import FormInput from "../form-input/form-input.component";
-import { SignUpContainer } from "./sign-up-form.styles.jsx";
+import { SignUpContainer } from "./sign-up-form.styles";
 
 import Button from "../button/button.component";
 import { useDispatch } from "react-redux";

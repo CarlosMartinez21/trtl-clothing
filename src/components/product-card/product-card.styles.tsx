@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { InvertedButton } from "../button/button.styles";
+import { BaseButton } from "../button/button.styles";
 
 export const ProductCardContainer = styled.div`
   width: 100%;
@@ -29,6 +29,27 @@ export const ProductCardContainer = styled.div`
       opacity: 0.85;
       display: flex;
     }
+
+    @media screen and (max-width: 800px) {
+      width: 40vw;
+
+      button {
+        display: block;
+        opacity: 0.9;
+        min-width: unset:
+        padding: 0 10px;
+        line-height: 20px;
+      }
+      
+      &:hover {
+        img {
+          opacity: unset;
+        }
+        button {
+          opacity: unset;
+        }
+      }
+    }
   }
 `;
 
@@ -46,4 +67,5 @@ export const Name = styled.span`
 
 export const Price = styled.span`
   width: 10%;
+  margin-right: 20px;
 `;

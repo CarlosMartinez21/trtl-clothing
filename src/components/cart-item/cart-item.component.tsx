@@ -4,10 +4,10 @@ import {
   ItemDetails,
   Name,
   Price,
-} from "./cart-item.styles.jsx";
+} from "./cart-item.styles";
 import { FC } from "react";
 
-import { CartItem as TCartItem } from "../../store/cart/cart.types.js";
+import { CartItem as TCartItem } from "../../store/cart/cart.types";
 
 type CartItemProps = {
   cartItem: TCartItem;

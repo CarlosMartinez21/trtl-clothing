@@ -3,7 +3,7 @@ import {
   Footer,
   Name,
   Price,
-} from "./product-card.styles.jsx";
+} from "./product-card.styles";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import { ShowCartContext } from "../../contexts/cart.context";
 import { useContext } from "react";
@@ -34,7 +34,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
       <img src={imageUrl} alt={`${name}`} />
       <Footer>
         <Name>{name}</Name>
-        <Price>{price}</Price>
+        <Price>${price}</Price>
       </Footer>
       <Button
         buttonType={BUTTON_TYPE_CLASSES.inverted}

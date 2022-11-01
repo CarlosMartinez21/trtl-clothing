@@ -4,7 +4,7 @@ import {
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
-import { ButtonsContainer, SignUpContainer } from "./sign-in-form.styles.jsx";
+import { ButtonsContainer, SignUpContainer } from "./sign-in-form.styles";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import { googleSignInStart } from "../../store/user/user.action";
 import { useDispatch } from "react-redux";

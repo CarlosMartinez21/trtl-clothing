@@ -12,6 +12,7 @@ import { store, persistor } from "./store/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { Elements } from "@stripe/react-stripe-js";
 import { stripePromise } from "./utils/stripe/stripe.utils";
+import { GlobalStyle } from "./components/global.styles";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,6 +24,7 @@ root.render(
           {/*<CategoriesProvider>*/}
           {/*<ShowCartProvider>*/}
           <Elements stripe={stripePromise}>
+            <GlobalStyle />
             <App />
           </Elements>
           {/*</ShowCartProvider>*/}

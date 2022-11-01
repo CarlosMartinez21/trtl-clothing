@@ -6,7 +6,7 @@ export const BaseButton = styled.button`
   width: auto;
   height: 50px;
   letter-spacing: 0.5px;
-  line-height: 50px;
+  line-height: 20px;
   padding: 0 35px 0 35px;
   font-size: 15px;
   background-color: black;
@@ -34,6 +34,10 @@ export const GoogleSignInButton = styled(BaseButton)`
   &:hover {
     background-color: #357ae8;
     border: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    line-height: 20px;
   }
 `;
 

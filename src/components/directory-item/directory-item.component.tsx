@@ -2,7 +2,7 @@ import {
   DirectoryItemContainer,
   BackgroundImage,
   Body,
-} from "./directory-item.styles.jsx";
+} from "./directory-item.styles";
 
 import { useNavigate } from "react-router-dom";
 import { FC } from "react";

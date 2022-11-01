@@ -6,7 +6,7 @@ import {
   CheckoutContainer,
   CheckoutHeader,
   HeaderBlock,
-} from "./checkout.styles.jsx";
+} from "./checkout.styles";
 
 import { selectCartItems } from "../../store/cart/cart.selector";
 import { useSelector } from "react-redux";
